@@ -1,4 +1,4 @@
-# challenge03-ignite-reactjs
+# ROCKETSHOES
 3rd challenge from Ignite - Rocketseat
 
 In this challenge, we would need to edit these files:
