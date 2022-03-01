@@ -72,9 +72,17 @@ export function CartProvider({ children }: CartProviderProps): JSX.Element {
 
   const removeProduct = (productId: number) => {
     try {
-      // TODO
+      const updatedCard = [...cart]
+      const product = updatedCard.find(product => product.id === productId)
+      if(product) {
+        const newCart = updatedCard.filter(product => product.id !== productId)
+        setCart(newCart)
+        localStorage.setItem("@RocketShoes:cart", JSON.stringify(newCart))
+      } else {
+        toast.error("Erro na remoção do produto")
+      }
     } catch {
-      // TODO
+      toast.error("Erro na remoção do produto")
     }
   };
 
@@ -82,16 +90,17 @@ export function CartProvider({ children }: CartProviderProps): JSX.Element {
     productId,
     amount,
   }: UpdateProductAmount) => {
-    // try {
-    //   const product = cart.find(product => product.id === productId)
-    //   console.log(product)
-    //   if(product) {
-    //     product.amount++
-    //     return setCart([...cart])
-    //   }
-    // } catch (err){
-    //   console.error(err)
-    // }
+    try {
+      const updatedCart = [...cart]
+      const product = updatedCart.find(product => product.id === productId)
+      if(product) {
+        product.amount++
+        setCart(updatedCart)
+        localStorage.setItem("@RocketShoes:cart", JSON.stringify(updatedCart))
+      }
+    } catch (err){
+      console.error(err)
+    }
   };
   return (
     <CartContext.Provider
