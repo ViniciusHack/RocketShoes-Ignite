@@ -30,7 +30,7 @@ const Home = (): JSX.Element => {
   // }, {} as CartItemsAmount)
 
 
-  // Buscar pelos produtos
+  // Buscar pelos produtos e formatar o preço
   useEffect(() => {
     async function loadProducts() {
       const allProductsResponse = await api.get("/products")
