@@ -93,13 +93,23 @@ export function CartProvider({ children }: CartProviderProps): JSX.Element {
     try {
       const updatedCart = [...cart]
       const product = updatedCart.find(product => product.id === productId)
+      const { data } = await api.get(`/stock/${productId}`)
+      const { amount: stockAmount } = data
       if(product) {
-        product.amount++
-        setCart(updatedCart)
-        localStorage.setItem("@RocketShoes:cart", JSON.stringify(updatedCart))
-      }
+        console.log(`PRIMEIRO ${product.amount}`)
+        if( amount < stockAmount && amount >= 1) {
+          product.amount = amount
+          setCart(updatedCart)
+          console.log(`SEGUNDO ${product.amount}`)
+          localStorage.setItem("@RocketShoes:cart", JSON.stringify(updatedCart))
+        } else {
+          toast.error('Quantidade solicitada fora de estoque')
+        }
+      } else {
+        toast.error("Erro na alteração de quantidade do produto")
+      } 
     } catch (err){
-      console.error(err)
+      toast.error('Erro na alteração de quantidade do produto')
     }
   };
   return (
