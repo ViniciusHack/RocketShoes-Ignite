@@ -1,7 +1,7 @@
 # ROCKETSHOES
 3rd challenge from Ignite - Rocketseat
 
-In this challenge, we would need to edit these files:
+In this challenge, we would need to edit these files elaboring new features:
 - [src/components/Header/index.tsx]
 - [src/pages/Home/index.tsx]
 - [src/pages/Cart/index.tsx]
