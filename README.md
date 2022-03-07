@@ -6,3 +6,7 @@ In this challenge, we would need to edit these files elaboring new features:
 - [src/pages/Home/index.tsx]
 - [src/pages/Cart/index.tsx]
 - [src/hooks/useCart.tsx]
+
+
+https://user-images.githubusercontent.com/60555584/156959043-caf90063-857e-4d60-8004-dc550ae56bb1.mp4
+
