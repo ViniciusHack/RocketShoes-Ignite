@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { MdAddShoppingCart } from 'react-icons/md';
-
-import { ProductList } from './styles';
+import { useCart } from '../../hooks/useCart';
 import { api } from '../../services/api';
 import { formatPrice } from '../../util/format';
-import { useCart } from '../../hooks/useCart';
+import { ProductList } from './styles';
+
 
 interface Product {
   id: number;
@@ -37,7 +37,7 @@ const Home = (): JSX.Element => {
       const allProductsResponse = await api.get("/products")
       const allProducts = allProductsResponse.data
       allProducts.map((product: ProductFormatted) => {
-        product.priceFormatted = formatPrice(product.price)
+        return product.priceFormatted = formatPrice(product.price)
       }) 
       setProducts(allProducts)
     }
