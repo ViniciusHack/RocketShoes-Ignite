@@ -1,4 +1,5 @@
 # ROCKETSHOES
+ROCKERSHOES is a part of an e-commerce, is a challenge from the third module form Ignite - Rocketseat
 3rd challenge from Ignite - Rocketseat
 
 In this challenge, we would need to edit these files elaboring new features:
@@ -6,17 +7,28 @@ In this challenge, we would need to edit these files elaboring new features:
 - [src/pages/Home/index.tsx]
 - [src/pages/Cart/index.tsx]
 - [src/hooks/useCart.tsx]
-Basically we create a cart for an e-commerce
+Basically we create a **cart** for an e-commerce
 
 https://user-images.githubusercontent.com/60555584/156959043-caf90063-857e-4d60-8004-dc550ae56bb1.mp4
 
-## Getting started
+## 🔨 Features
+- Add product to the cart
+- Remove product of the cart
+- Save the products on local storage
+- Get products of JSON server
+- Calculate prices
+- Notify errors with toasts
 
-**Run the followings commands** 
-`git clone https://github.com/ViniciusHack/RocketShoes-Ignite.git` to clone the repository<br />
-`yarn` or `npm install` to install all packages <br />
-`yarn start` or `npm start` to start the application
+## ✔️ Getting started
+`git clone https://github.com/ViniciusHack/RocketShoes-Ignite.git` clone the repository<br />
+`cd RocketShoes-Ignite`  acces the folder <br />
+`yarn` or `npm install` install all packages <br />
+`yarn start` or `npm start` start the application <br />
 
-## Deploy
-Deployed on vercel, but I'm using JSON server, so you can't see the items yet.
-https://rocket-shoes-ignite-n5524g9i6-viniciushack.vercel.app/
+## 🚀 Deploy
+Deployed on vercel, but I'm using JSON server, so you can't see the items yet. You can access the app **<a href="https://rocket-shoes-ignite-n5524g9i6-viniciushack.vercel.app/">here</a>** or try this https://rocket-shoes-ignite-n5524g9i6-viniciushack.vercel.app/
+
+## 🔧 Technologies
+- ReactJS
+- react-toastfy
+- JSON server
