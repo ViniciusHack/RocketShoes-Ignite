@@ -1,5 +1,5 @@
-# ROCKETSHOES
-ROCKERSHOES is a part of an e-commerce, is a challenge from the third module form Ignite - Rocketseat
+# ![logo](https://user-images.githubusercontent.com/60555584/162859689-15e46e14-3610-4220-94fc-2f21110a7610.svg)
+ROCKETSHOES is a part of an e-commerce, is a challenge from the third module form Ignite - Rocketseat
 3rd challenge from Ignite - Rocketseat
 
 In this challenge, we would need to edit these files elaboring new features:
